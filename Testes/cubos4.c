@@ -1,57 +1,135 @@
 
-#include <GLUT/glut.h>
-#include <OpenGL/glu.h>
-#include <OpenGL/gl.h>
+#include <GL/glut.h>
+#include <GL/glu.h>
+#include <GL/gl.h>
 #include <stdlib.h>
 #include <stdio.h>
 
-int x = 0, y = 0, z = 0;
+float x = 0, y = 0, z = 0;
 
 void init(void){
   glClearColor (0.0, 0.0, 0.0, 0.0);
+  
 }
 
 void display(void){
   glClear (GL_COLOR_BUFFER_BIT);
-  glPushMatrix();
-
-  /* Cubo 1 */
+  
   glPushMatrix();
   glRotatef(x, 1.0, 0.0, 0.0);
   glRotatef(y, 0.0, 1.0, 0.0);
   glRotatef(z, 0.0, 0.0, 1.0);
-  // glTranslatef (-2.0, 0.0, 0.0);
-  // glScalef (3.0, 2.0, 5.0);
-  glutWireCube (1.0);
+  glBegin(GL_LINE_STRIP);
+     glVertex3f(0.0f, 0.0f, 0.0f);   
+     glVertex3f(1.0f, 0.0f, 0.0f);  
+     glVertex3f(1.0f, 2.0f, 0.0f); 
+     glVertex3f(0.0f, 2.0f, 0.0f);     
+     
+     glVertex3f(0.0f, 0.0f, 0.0f);
+     glVertex3f(0.0f, 2.0f, 0.0f);
+     glVertex3f(0.0f, 2.0f, 1.0f);
+     glVertex3f(0.0f, 0.0f, 1.0f);
+     
+     glVertex3f(0.0f, 0.0f, 0.0f);  
+     glVertex3f(0.0f, 0.0f, 1.0f); 
+     glVertex3f(1.0f, 0.0f, 1.0f);  
+     glVertex3f(1.0f, 0.0f, 0.0f);     
+     
+  glEnd();
   glPopMatrix();
-   
-  /* Cubo 2 */
-/*  
+  
   glPushMatrix();
-  glRotatef (25.0, 0.0, 0.0, 1.0);
-  glTranslatef (2.0, 0.0, 0.0);
-  glScalef (2.0, 1.0, 4.0);
-  glutWireCube (1.0);
+  glRotatef(x, 1.0, 0.0, 0.0);
+  glRotatef(y, 0.0, 1.0, 0.0);
+  glRotatef(z, 0.0, 0.0, 1.0); 
+  glBegin(GL_LINE_STRIP);
+     glVertex3f(0.0f, 2.0f, 0.0f);
+     glVertex3f(1.0f, 2.0f, 0.0f);
+     glVertex3f(1.0f, 2.0f, 1.0f);
+     glVertex3f(0.0f, 2.0f, 1.0f);
+  glEnd();
   glPopMatrix();
-*/
-   /* Cubo 3 */
-/*
+
   glPushMatrix();
-  glTranslatef (0.0, 2.0, 0.0);
-  glScalef (2.0, 1.0, 4.0);
-  glutWireCube (1.0);
+  glRotatef(x, 1.0, 0.0, 0.0);
+  glRotatef(y, 0.0, 1.0, 0.0);
+  glRotatef(z, 0.0, 0.0, 1.0); 
+  glBegin(GL_LINE_STRIP);
+     glVertex3f(1.0f, 0.0f, 1.0f);
+     glVertex3f(1.0f, 2.0f, 1.0f); 
+  glEnd();
   glPopMatrix();
-*/
-     /* Cubo 4 */
-/*
+    
   glPushMatrix();
-  glTranslatef (0.0, -2.0, 0.0);
-  glScalef (2.0, 1.0, 4.0);
-  glutWireCube (1.0);
+  glRotatef(x, 1.0, 0.0, 0.0);
+  glRotatef(y, 0.0, 1.0, 0.0);
+  glRotatef(z, 0.0, 0.0, 1.0); 
+  glBegin(GL_LINE_STRIP);
+     glVertex3f(1.0f, 0.0f, 0.0f);
+     glVertex3f(1.25f, 0.0f, 0.0f);
+     glVertex3f(1.25f, -0.25f, 0.0f);
+     glVertex3f(1.5f, -0.25f, 0.0f);
+     glVertex3f(1.5f, -0.5f, 0.0f);
+     glVertex3f(1.75f, -0.5f, 0.0f);
+     glVertex3f(1.75f, -2.0f, 0.0f);
+  glEnd();
   glPopMatrix();
-*/
+  
+  glPushMatrix();
+  glRotatef(x, 1.0, 0.0, 0.0);
+  glRotatef(y, 0.0, 1.0, 0.0);
+  glRotatef(z, 0.0, 0.0, 1.0);
+  glBegin(GL_LINE_STRIP);
+     glVertex3f(0.0f, 0.0f, 0.0f);
+     glVertex3f(-0.25f, 0.0f, 0.0f);
+     glVertex3f(-0.25f, -0.25f, 0.0f);
+     glVertex3f(-0.5f, -0.25f, 0.0f);
+     glVertex3f(-0.5f, -0.5f, 0.0f);
+     glVertex3f(-0.75f, -0.5f, 0.0f);
+     glVertex3f(-0.75f, -2.0f, 0.0f);
+  glEnd();
   glPopMatrix();
+  
+  glPushMatrix();
+  glRotatef(x, 1.0, 0.0, 0.0);
+  glRotatef(y, 0.0, 1.0, 0.0);
+  glRotatef(z, 0.0, 0.0, 1.0);
+  glBegin(GL_LINE_STRIP);
+     glVertex3f(1.0f, 1.0f, 0.0f);
+     glVertex3f(1.25f, 1.0f, 0.0f);
+     glVertex3f(1.25f, 0.75f, 0.0f);
+     glVertex3f(1.5f, 0.75f, 0.0f);
+     glVertex3f(1.5f, 0.5f, 0.0f);
+     glVertex3f(1.75f, 0.5f, 0.0f);
+     glVertex3f(1.75f, 0.0f, 0.0f);
+     glVertex3f(2.0f, 0.0f, 0.0f);
+     glVertex3f(2.0f, -0.25f, 0.0f);
+     glVertex3f(2.25f, -0.25f, 0.0f);
+     glVertex3f(2.25f, -2.0f, 0.0f);
+  glEnd();
+  glPopMatrix();
+  
+  glPushMatrix();
+  glRotatef(x, 1.0, 0.0, 0.0);
+  glRotatef(y, 0.0, 1.0, 0.0);
+  glRotatef(z, 0.0, 0.0, 1.0);
+  glBegin(GL_LINE_STRIP);
+     glVertex3f(0.0f, 1.0f, 0.0f);
+     glVertex3f(-0.25f, 1.0f, 0.0f);
+     glVertex3f(-0.25f, 0.75f, 0.0f);
+     glVertex3f(-0.5f, 0.75f, 0.0f);
+     glVertex3f(-0.5f, 0.5f, 0.0f);
+     glVertex3f(-0.75f, 0.5f, 0.0f);
+     glVertex3f(-0.75f, 0.0f, 0.0f);
+     glVertex3f(-1.0f, 0.0f, 0.0f);
+     glVertex3f(-1.0f, -0.25f, 0.0f);
+     glVertex3f(-1.25f, -0.25f, 0.0f);
+     glVertex3f(-1.25f, -2.0f, 0.0f);
+  glEnd(); 
+  glPopMatrix();
+  
   glutSwapBuffers();
+  
 }
 
 void reshape (int w, int h){
@@ -94,6 +172,6 @@ int main(int argc, char** argv){
   glutKeyboardFunc(keyboard);
   glutMouseFunc(mouse);
   glutMainLoop();
-  printf("%d %d %d\n", x, y, z); 
+  printf("%f %f %f\n", x, y, z); 
   return 0;
 }
