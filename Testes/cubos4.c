@@ -14,20 +14,22 @@ void init(void){
 
 void display(void){
   glClear (GL_COLOR_BUFFER_BIT);
-  
+  // Retângulo com o sino  
   glPushMatrix();
+  
   glRotatef(x, 1.0, 0.0, 0.0);
   glRotatef(y, 0.0, 1.0, 0.0);
   glRotatef(z, 0.0, 0.0, 1.0);
+  
   glBegin(GL_LINE_STRIP);
      glVertex3f(0.0f, 0.0f, 0.0f);   
      glVertex3f(1.0f, 0.0f, 0.0f);  
-     glVertex3f(1.0f, 2.0f, 0.0f); 
-     glVertex3f(0.0f, 2.0f, 0.0f);     
+     glVertex3f(1.0f, 4.0f, 0.0f); 
+     glVertex3f(0.0f, 4.0f, 0.0f);     
      
      glVertex3f(0.0f, 0.0f, 0.0f);
-     glVertex3f(0.0f, 2.0f, 0.0f);
-     glVertex3f(0.0f, 2.0f, 1.0f);
+     glVertex3f(0.0f, 4.0f, 0.0f);
+     glVertex3f(0.0f, 4.0f, 1.0f);
      glVertex3f(0.0f, 0.0f, 1.0f);
      
      glVertex3f(0.0f, 0.0f, 0.0f);  
@@ -37,33 +39,40 @@ void display(void){
      
   glEnd();
   glPopMatrix();
-  
+  // Parte do retângulo
   glPushMatrix();
+  
   glRotatef(x, 1.0, 0.0, 0.0);
   glRotatef(y, 0.0, 1.0, 0.0);
   glRotatef(z, 0.0, 0.0, 1.0); 
+  
   glBegin(GL_LINE_STRIP);
-     glVertex3f(0.0f, 2.0f, 0.0f);
-     glVertex3f(1.0f, 2.0f, 0.0f);
-     glVertex3f(1.0f, 2.0f, 1.0f);
-     glVertex3f(0.0f, 2.0f, 1.0f);
+     glVertex3f(0.0f, 4.0f, 0.0f);
+     glVertex3f(1.0f, 4.0f, 0.0f);
+     glVertex3f(1.0f, 4.0f, 1.0f);
+     glVertex3f(0.0f, 4.0f, 1.0f);
   glEnd();
   glPopMatrix();
 
   glPushMatrix();
+  
   glRotatef(x, 1.0, 0.0, 0.0);
   glRotatef(y, 0.0, 1.0, 0.0);
   glRotatef(z, 0.0, 0.0, 1.0); 
+  
+  
   glBegin(GL_LINE_STRIP);
      glVertex3f(1.0f, 0.0f, 1.0f);
-     glVertex3f(1.0f, 2.0f, 1.0f); 
+     glVertex3f(1.0f, 4.0f, 1.0f); 
   glEnd();
   glPopMatrix();
-    
+  // Contorno do retângulo  
   glPushMatrix();
+  
   glRotatef(x, 1.0, 0.0, 0.0);
   glRotatef(y, 0.0, 1.0, 0.0);
   glRotatef(z, 0.0, 0.0, 1.0); 
+  
   glBegin(GL_LINE_STRIP);
      glVertex3f(1.0f, 0.0f, 0.0f);
      glVertex3f(1.25f, 0.0f, 0.0f);
@@ -76,9 +85,11 @@ void display(void){
   glPopMatrix();
   
   glPushMatrix();
+  
   glRotatef(x, 1.0, 0.0, 0.0);
   glRotatef(y, 0.0, 1.0, 0.0);
   glRotatef(z, 0.0, 0.0, 1.0);
+  
   glBegin(GL_LINE_STRIP);
      glVertex3f(0.0f, 0.0f, 0.0f);
      glVertex3f(-0.25f, 0.0f, 0.0f);
@@ -91,43 +102,71 @@ void display(void){
   glPopMatrix();
   
   glPushMatrix();
+  
   glRotatef(x, 1.0, 0.0, 0.0);
   glRotatef(y, 0.0, 1.0, 0.0);
   glRotatef(z, 0.0, 0.0, 1.0);
+  
   glBegin(GL_LINE_STRIP);
-     glVertex3f(1.0f, 1.0f, 0.0f);
-     glVertex3f(1.25f, 1.0f, 0.0f);
-     glVertex3f(1.25f, 0.75f, 0.0f);
-     glVertex3f(1.5f, 0.75f, 0.0f);
-     glVertex3f(1.5f, 0.5f, 0.0f);
-     glVertex3f(1.75f, 0.5f, 0.0f);
-     glVertex3f(1.75f, 0.0f, 0.0f);
-     glVertex3f(2.0f, 0.0f, 0.0f);
-     glVertex3f(2.0f, -0.25f, 0.0f);
-     glVertex3f(2.25f, -0.25f, 0.0f);
-     glVertex3f(2.25f, -2.0f, 0.0f);
+     glVertex3f(1.0f, 2.0f, 0.25f);
+     glVertex3f(1.25f, 2.0f, 0.25f);
+     glVertex3f(1.25f, 1.75f, 0.25f);
+     glVertex3f(1.5f, 1.75f, 0.25f);
+     glVertex3f(1.5f, 1.5f, 0.25f);
+     glVertex3f(1.75f, 1.5f, 0.25f);
+     glVertex3f(1.75f, 1.0f, 0.25f);
+     glVertex3f(2.0f, 1.0f, 0.25f);
+     glVertex3f(2.0f, 0.75f, 0.25f);
+     glVertex3f(2.25f, 0.75f, 0.25f);
+     glVertex3f(2.25f, 0.25f, 0.25f);
+     glVertex3f(2.5f, 0.25f, 0.25f);
+     glVertex3f(2.5f, 0.0f, 0.25f);
+     glVertex3f(2.75f, 0.0f, 0.25f);
+     glVertex3f(2.75f, -0.25f, 0.25f);
+     glVertex3f(3.0f, -0.25f, 0.25f);
+     glVertex3f(3.0f, -2.5f, 0.25f);
   glEnd();
   glPopMatrix();
   
   glPushMatrix();
+  
+  glRotatef(x, 1.0, 0.0, 0.0);
+  glRotatef(y, 0.0, 1.0, 0.0);
+  glRotatef(z, 0.0, 0.0, 1.0);
+  
+  glBegin(GL_LINE_STRIP);
+     glVertex3f(0.0f, 2.0f, 0.25f);
+     glVertex3f(-0.25f, 2.0f, 0.25f);
+     glVertex3f(-0.25f, 1.75f, 0.25f);
+     glVertex3f(-0.5f, 1.75f, 0.25f);
+     glVertex3f(-0.5f, 1.5f, 0.25f);
+     glVertex3f(-0.75f, 1.5f, 0.25f);
+     glVertex3f(-0.75f, 1.0f, 0.25f);
+     glVertex3f(-1.0f, 1.0f, 0.25f);
+     glVertex3f(-1.0f, 0.75f, 0.25f);
+     glVertex3f(-1.25f, 0.75f, 0.25f);
+     glVertex3f(-1.25f, 0.25f, 0.25f);
+     glVertex3f(-1.5f, 0.25f, 0.25f);
+     glVertex3f(-1.5f, 0.0f, 0.25f);
+     glVertex3f(-1.75f, 0.0f, 0.25f);
+     glVertex3f(-1.75f, -0.25f, 0.25f);
+     glVertex3f(-2.0f, -0.25f, 0.25f);
+     glVertex3f(-2.0f, -2.5f, 0.25f);
+  glEnd(); 
+  glPopMatrix();
+
+  glPushMatrix();  
   glRotatef(x, 1.0, 0.0, 0.0);
   glRotatef(y, 0.0, 1.0, 0.0);
   glRotatef(z, 0.0, 0.0, 1.0);
   glBegin(GL_LINE_STRIP);
-     glVertex3f(0.0f, 1.0f, 0.0f);
-     glVertex3f(-0.25f, 1.0f, 0.0f);
-     glVertex3f(-0.25f, 0.75f, 0.0f);
-     glVertex3f(-0.5f, 0.75f, 0.0f);
-     glVertex3f(-0.5f, 0.5f, 0.0f);
-     glVertex3f(-0.75f, 0.5f, 0.0f);
-     glVertex3f(-0.75f, 0.0f, 0.0f);
-     glVertex3f(-1.0f, 0.0f, 0.0f);
-     glVertex3f(-1.0f, -0.25f, 0.0f);
-     glVertex3f(-1.25f, -0.25f, 0.0f);
-     glVertex3f(-1.25f, -2.0f, 0.0f);
-  glEnd(); 
+     glVertex3f(-2.0f, 1.25f, 0.5f);
+     glVertex3f(3.0f, 1.25f, 0.5f);
+     glVertex3f(3.0f, -2.5f, 0.5f);
+    
+  glEnd();
   glPopMatrix();
-  
+
   glutSwapBuffers();
   
 }
@@ -163,7 +202,7 @@ void mouse(int button, int state, int mx, int my, int mz) {
 int main(int argc, char** argv){
   glutInit(&argc, argv);
   glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB);
-  glutInitWindowSize (500, 500); 
+  glutInitWindowSize (600, 600); 
   glutInitWindowPosition (100, 100);
   glutCreateWindow (argv[0]);
   init ();
